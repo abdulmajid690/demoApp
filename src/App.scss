@@ -1,0 +1,394 @@
+$primary-clr: #009525;
+$dark-primary-clr: #004912;
+$white-clr: #fff;
+$gray-bg: #212521;
+$primary-border: rgba(0, 0, 0, 0.1);
+$simple-font: "PT Sans", sans-serif;
+$select-clr: #505050;
+$select-focus: rgba(0, 149, 37, 0.6);
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  width: 94%;
+  background-color: #212521;
+  padding: 10px 41px;
+  position: relative;
+  z-index: 2;
+
+  .nav-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .logo {
+      width: 45%;
+      a {
+        display: flex;
+
+        img {
+          width: 160px;
+        }
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      align-items: center;
+
+      .login-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 7px 12px;
+        margin: 0 25px;
+        font-family: pt sans, helvetica neue, Ariel, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .toggle-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.4s;
+        position: relative;
+        z-index: 1;
+
+        svg {
+          display: flex;
+          color: $white-clr;
+        }
+      }
+
+      .login-btn:hover {
+        background-color: #fff;
+        color: $primary-clr;
+      }
+    }
+  }
+}
+
+.disabled-sidebar {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $gray-bg;
+  transition: all 0.3s;
+  overflow-y: scroll;
+
+  .center-box {
+    .nav-links {
+      .nav-item {
+        list-style: none;
+        padding: 10px 0;
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: $simple-font;
+          font-size: 1.5rem;
+          color: $primary-clr;
+          text-transform: capitalize;
+          text-decoration: none;
+
+          svg {
+            font-size: 1rem;
+            margin: 0 0 0 7px;
+          }
+        }
+
+        .dropdown-menu {
+          background-color: $white-clr;
+          transition: all 0.3s;
+          display: none;
+          margin: 15px 0 0;
+
+          .nav-item {
+            .nav-link {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+// customer content
+
+.select-container {
+  width: 100%;
+  height: 39rem;
+  position: relative;
+  z-index: 1;
+
+  .bg-overlay {
+    height: 780px;
+    background-color: #009525;
+    background-image: url("https://www.trustedtravel.com/assets/images/hero/hero-overlay.png");
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    margin: -155px 0 0;
+  }
+
+  .position-relative {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff04;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+
+    .space {
+      flex: 0.5;
+    }
+
+    .customer-guide {
+      padding: 30px 15px 0;
+      flex: 2;
+
+      h3 {
+        font-family: $simple-font;
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: $white-clr;
+      }
+
+      .carosel {
+        h3 {
+          font-family: $simple-font;
+          text-transform: capitalize;
+          margin: 10px 0;
+        }
+        h2 {
+          font-family: $simple-font;
+          font-size: 1.3rem;
+          font-weight: 500;
+          font-style: italic;
+          line-height: 2.2rem;
+          margin-bottom: 10px;
+          color: $white-clr;
+        }
+      }
+
+      .flex-inline {
+        display: flex;
+        align-content: center;
+        margin: 15px 0;
+
+        .underline {
+          width: 40px;
+          height: 1px;
+          border: 1px solid $white-clr;
+          border-radius: 50px;
+          background-color: $white-clr;
+          margin: 0 10px 0 0;
+        }
+
+        .dot {
+          width: 2px;
+          height: 2px;
+          margin: 0 5px;
+          border: 1px solid $white-clr;
+          border-radius: 50%;
+          background-color: $white-clr;
+        }
+      }
+
+      h4 {
+        font-family: $simple-font;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $white-clr;
+      }
+    }
+
+    .selection {
+      flex: 3.5;
+      height: auto;
+      display: flex;
+      padding: 50px 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      background-color: $white-clr;
+
+      .select-date {
+        flex: 2;
+        padding: 0 30px;
+        border-right: 1px solid $primary-clr;
+
+        label {
+          display: block;
+          font-family: $simple-font;
+          font-size: 1rem;
+          text-transform: capitalize;
+          margin-bottom: 10px;
+        }
+
+        select {
+          width: 100%;
+          height: 51px;
+          padding: 5px 10px;
+          font-family: $simple-font;
+          font-size: 1.05rem;
+          border: 2px solid $primary-border;
+          border-radius: 5px;
+          color: $select-clr;
+          transition: all 0.4s;
+
+          option {
+            color: $select-clr;
+            font-family: $simple-font;
+            font-size: 1.05rem;
+            margin: 3px 0 0;
+          }
+        }
+
+        select:focus {
+          border: 2px solid $select-focus;
+          outline: none;
+          box-shadow: none;
+        }
+
+        .seperate-div {
+          display: flex;
+          align-items: center;
+          margin: 20px 0 0;
+
+          .border {
+            height: 47px;
+            border: 2px solid $primary-border;
+            border-radius: 5px;
+            margin: 0 5px 0 0;
+            transition: all 0.4s;
+          }
+
+          .drop-off-time {
+            margin: 0 0 0 5px;
+          }
+
+          .arrival-time {
+            margin: 0 0 0 5px;
+          }
+
+          .flex {
+            flex: 1;
+          }
+
+          .input-field {
+            margin-right: 5px;
+            input {
+              height: 38px;
+              padding: 5px 10px;
+              border-radius: 4px;
+              border: 2px solid rgba(0, 0, 0, 0.1);
+              font-family: $simple-font;
+              font-size: 1rem;
+              text-transform: capitalize;
+              transition: all 0.4s;
+            }
+
+            input:focus {
+              border: 2px solid $select-focus;
+              outline: none;
+              box-shadow: none;
+            }
+          }
+
+          .btn-container {
+            margin-left: 5px;
+
+            .find-btn {
+              width: 100%;
+              height: 52px;
+              padding: 5px 10px;
+              margin: 25px 0 0;
+              font-family: $simple-font;
+              font-size: 1.2rem;
+              color: $white-clr;
+              text-transform: capitalize;
+              border: 1px solid $primary-clr;
+              border-radius: 4px;
+              background-color: $primary-clr;
+              cursor: pointer;
+            }
+
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+
+      .review-rating {
+        flex: 1.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: $select-clr;
+
+        h1 {
+          font-family: $simple-font;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        .bold-text {
+          font-size: 3rem !important;
+          font-weight: 700;
+          color: $primary-clr;
+          margin: 10px 0 0;
+        }
+
+        h2 {
+          font-family: $simple-font;
+          font-size: 1.4rem;
+          margin: 10px 0 15px;
+        }
+
+        p {
+          font-family: $simple-font;
+          font-size: 1.8rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+}

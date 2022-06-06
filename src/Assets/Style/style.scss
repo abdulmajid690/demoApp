@@ -1,0 +1,780 @@
+@import "../../App.scss";
+
+.container {
+  position: relative;
+  z-index: 3;
+
+  .reviews-content {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-family: $simple-font;
+      font-size: 2.3rem;
+      font-weight: 500;
+      color: $primary-clr;
+    }
+  }
+
+  .travel-container {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    background-image: url("https://www.trustedtravel.com/assets/images/hero/helping-you-travel.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    .bg-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      z-index: 2;
+    }
+
+    .flexible-div {
+      width: 54%;
+      padding: 80px 0;
+      position: relative;
+      text-align: center;
+      z-index: 3;
+      h2 {
+        font-family: $simple-font;
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $white-clr;
+      }
+      p {
+        font-family: $simple-font;
+        font-size: 1rem;
+        line-height: 25px;
+        color: $white-clr;
+      }
+
+      .btn-container {
+        margin: 25px 0 0;
+
+        button {
+          font-family: $simple-font;
+          font-size: 1rem;
+          transition: all 0.4s;
+          text-transform: uppercase;
+          border-radius: 3px;
+          padding: 10px 17px;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+
+        .join-btn {
+          border: 1px solid $primary-clr;
+          background-color: $primary-clr;
+          color: $white-clr;
+        }
+        .join-btn:hover {
+          opacity: 0.7;
+        }
+
+        .learn-more-btn {
+          background-color: transparent;
+          border: 1px solid $white-clr;
+          color: $white-clr;
+        }
+        .learn-more-btn:hover {
+          background-color: $white-clr;
+          color: $primary-clr;
+        }
+      }
+
+      .flex-inline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 25px 0;
+
+        .underline {
+          width: 40px;
+          height: 1px;
+          border: 1px solid $white-clr;
+          border-radius: 50px;
+          background-color: $white-clr;
+          margin: 0 10px 0 0;
+        }
+
+        .dot {
+          width: 2px;
+          height: 2px;
+          margin: 0 5px;
+          border: 1px solid $white-clr;
+          border-radius: 50%;
+          background-color: $white-clr;
+        }
+      }
+    }
+  }
+
+  .detail-container {
+    margin: 70px 0;
+    .d-flex {
+      display: flex;
+
+      .left-flex {
+        flex: 5;
+        padding: 0 50px;
+
+        .text-head {
+          font-family: $simple-font;
+          font-size: 2rem;
+          font-weight: 400;
+        }
+
+        p {
+          font-family: $simple-font;
+          font-size: 1.5rem;
+          color: $select-clr;
+        }
+
+        .content {
+          width: 92%;
+          article {
+            display: flex;
+            align-items: flex-start;
+            margin: 20px 0 0;
+
+            .icon {
+              svg {
+                font-size: 2rem;
+                color: $primary-clr;
+                margin: 10px 15px 0 0;
+              }
+            }
+
+            .description {
+              p {
+                font-family: $simple-font;
+                font-size: 1.05rem;
+                line-height: 25px;
+                color: #111;
+
+                .primary-link {
+                  color: $primary-clr;
+                  text-decoration: none;
+                }
+                a:hover {
+                  color: $dark-primary-clr;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+
+        .flex-inline {
+          display: flex;
+          align-items: center;
+          margin: 25px 0;
+
+          .underline {
+            width: 40px;
+            height: 1px;
+            border: 1px solid $primary-clr;
+            border-radius: 50px;
+            background-color: $primary-clr;
+            margin: 0 10px 0 0;
+          }
+
+          .dot {
+            width: 2px;
+            height: 2px;
+            margin: 0 5px;
+            border: 1px solid $primary-clr;
+            border-radius: 50%;
+            background-color: $primary-clr;
+          }
+        }
+      }
+      .right-flex {
+        flex: 8;
+
+        .seperate-content {
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+
+          div {
+            width: 100%;
+            height: 300px;
+            margin: 0 0 10px;
+            opacity: 0.85;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            overflow: hidden;
+          }
+
+          h2 {
+            font-family: $simple-font;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: $white-clr;
+            margin: 0 0 10px 15px;
+          }
+
+          .light-btn {
+            padding: 10px 15px;
+            margin: 20px 0 0;
+            font-family: $simple-font;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border: 1px solid $white-clr;
+            border-radius: 4px;
+            background-color: transparent;
+            color: $white-clr;
+            cursor: pointer;
+            transition: all 0.4s;
+          }
+
+          .light-btn:hover {
+            background-color: $white-clr;
+            color: $primary-clr;
+          }
+
+          .overlay-content {
+            position: absolute;
+            top: 0;
+            width: 87%;
+            height: 100%;
+            padding: 0 25px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #009525;
+            background-image: url("https://www.trustedtravel.com/assets/images/logo_overlay.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 250px center;
+            z-index: 2;
+            overflow: hidden;
+            transition: all 0.3s;
+            transform: translateX(260%);
+
+            p {
+              font-family: $simple-font;
+              font-size: 1rem;
+              line-height: 22px;
+              color: $white-clr;
+            }
+          }
+
+          .small-overlay {
+            padding: 0 20px;
+          }
+
+          .big-overlay {
+            width: 89%;
+          }
+
+          .lounges-content {
+            flex: 1;
+            position: relative;
+            z-index: -1;
+            margin-right: 10px;
+            background-image: url("https://www.trustedtravel.com/assets/images/products/lounges.jpg");
+          }
+          .lounges-content:hover .overlay-content {
+            transform: translateX(0px) !important;
+          }
+
+          .parking-content {
+            flex: 1;
+            position: relative;
+            background-image: url("https://www.trustedtravel.com/assets/images/products/parking.jpg");
+          }
+          .parking-content:hover .overlay-content {
+            transform: translateX(0px) !important;
+          }
+
+          .transfer-content {
+            flex: 2;
+            position: relative;
+            margin-right: 10px;
+            background-image: url("https://www.trustedtravel.com/assets/images/products/transfers_new.jpg");
+          }
+          .transfer-content:hover .overlay-content {
+            transform: translateX(0px) !important;
+          }
+
+          .trusted-content {
+            flex: 3;
+            position: relative;
+            background-image: url("https://www.trustedtravel.com/assets/images/products/service.jpg");
+          }
+          .trusted-content:hover .overlay-content {
+            transform: translateX(0px) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.offer-container {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+  background-image: url("https://www.trustedtravel.com/assets/images/weSwapHero.jpg");
+  background-size: cover;
+  background-position: top;
+
+  .persons-bg {
+    width: 40%;
+    background-color: $white-clr;
+    padding: 10px;
+    position: absolute;
+    right: 100px;
+    top: 80px;
+    box-shadow: 0 0 7px 1px rgb(0 0 0 / 30%);
+
+    .discount-card {
+      width: 100%;
+      height: 350px;
+      background-image: url("https://www.trustedtravel.com/assets/images/backgrounds/bg-image-trusted-customer.jpg");
+      background-size: cover;
+
+      .overlay {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 0;
+        font-family: $simple-font;
+        h1 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: $white-clr;
+        }
+
+        img {
+          width: 45%;
+          margin: 20px 0 0;
+        }
+
+        p {
+          font-size: 1.1rem;
+          font-weight: 400;
+          color: $white-clr;
+          margin: 20px 0;
+        }
+
+        .primary-btn {
+          font-family: $simple-font;
+          font-size: 1rem;
+          font-weight: 400;
+          padding: 10px 25px;
+          background-color: $primary-clr;
+          border: 1px solid $primary-clr;
+          border-radius: 4px;
+          color: $white-clr;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .primary-btn:hover {
+          opacity: 0.75;
+        }
+
+        .primary-btn:focus {
+          box-shadow: 0 0 0 0.2rem rgb(0 149 37 / 50%);
+        }
+      }
+    }
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  height: 30rem;
+  background-color: #f3f3f3;
+  padding: 50px 0 50px;
+  margin: 80px 0 20px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      font-family: $simple-font;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: $select-clr;
+    }
+
+    .flex-inline {
+      display: flex;
+      align-items: center;
+      margin: 20px 0 40px;
+
+      .underline {
+        width: 40px;
+        height: 1px;
+        border: 1px solid $primary-clr;
+        border-radius: 50px;
+        background-color: $primary-clr;
+        margin: 0 10px 0 0;
+      }
+
+      .dot {
+        width: 2px;
+        height: 2px;
+        margin: 0 5px;
+        border: 1px solid $primary-clr;
+        border-radius: 50%;
+        background-color: $primary-clr;
+      }
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+
+    .btn-container {
+      flex: 1;
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+        color: $primary-clr;
+        cursor: pointer;
+        display: flex;
+      }
+      .next-btn {
+        float: right;
+      }
+      .next-btn:hover {
+        opacity: 0.85;
+      }
+      .prev-btn {
+        float: left;
+      }
+      .prev-btn:hover {
+        opacity: 0.85;
+      }
+    }
+    .company-products {
+      flex: 12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        background-color: $white-clr;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+        margin: 0 15px;
+        width: 76%;
+      }
+
+      .btns-container {
+        font-family: $simple-font;
+        padding: 20px;
+        margin: 0;
+        width: 84%;
+
+        p {
+          font-size: 0.6rem;
+          text-transform: uppercase;
+          color: #90928f;
+        }
+
+        .title {
+          font-size: 1.3rem;
+          color: $select-clr;
+          margin: 3px 0 7px;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid $primary-clr;
+        border-radius: 5px;
+        font-family: $simple-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 8px 0;
+        color: $primary-clr;
+        margin: 10px 0 0;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .parking-btn:hover {
+        background-color: $primary-clr;
+        color: $white-clr;
+      }
+      .booking-btn:hover {
+        background-color: $primary-clr;
+        color: $white-clr;
+      }
+
+      .top-overlay {
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 142px;
+        width: 100%;
+      }
+
+      .liverpool {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Liverpool.jpg");
+        }
+      }
+      .gatwick {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Gatwick.jpg");
+        }
+      }
+      .manchester {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Manchester.jpg");
+        }
+      }
+      .heathrow {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Heathrow.jpg");
+        }
+      }
+      .glasgow {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Glasgow.jpg");
+        }
+      }
+      .edinburgh {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Edinburgh.jpg");
+        }
+      }
+      .stansted {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Stansted.jpg");
+        }
+      }
+      .birmingham {
+        .top-overlay {
+          background-image: url("https://www.trustedtravel.com/assets/images/airports/Birmingham.jpg");
+        }
+      }
+    }
+  }
+}
+
+.footer-container {
+  .about-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: #212521;
+    padding: 40px 30px;
+
+    .logo {
+      flex: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 60px 0;
+      img {
+        width: 75%;
+      }
+    }
+
+    .seperate-content {
+      flex: 2.5;
+      display: flex;
+      align-items: center;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0 30px;
+    }
+
+    .social-link-container {
+      flex: 2;
+      margin: 0 10px;
+      text-align: center;
+
+      .social-links {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px 10px;
+        margin: 20px 0 0;
+        li {
+          list-style: none;
+          border: 1px solid #90928f;
+          border-radius: 4px;
+          padding: 18px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            font-size: 1.1rem;
+            color: #90928f;
+          }
+        }
+      }
+    }
+
+    .text-container {
+      flex: 2;
+      p {
+        font-family: $simple-font;
+        font-size: 0.8rem;
+        color: $white-clr;
+        margin: 15px 0 0;
+      }
+
+      .primary-btn {
+        border: 1px solid $primary-clr;
+        border-radius: 4px;
+        background-color: $primary-clr;
+        font-family: $simple-font;
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        color: $white-clr;
+        cursor: pointer;
+        padding: 8px 20px;
+        margin: 35px 0 0;
+      }
+      .primary-btn:hover {
+        opacity: 0.8;
+      }
+    }
+    ul {
+      flex: 1;
+    }
+
+    h4 {
+      font-family: $simple-font;
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      color: $white-clr;
+      margin: 10px 0;
+    }
+
+    .footer-link {
+      list-style: none;
+      margin: 0 0 5px;
+
+      a {
+        font-family: $simple-font;
+        font-size: 1rem;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: #90928f;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .parking-names {
+    background-color: #161916;
+    display: flex;
+    padding: 40px 120px;
+
+    h3 {
+      font-family: $simple-font;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0 0 10px;
+      color: $white-clr;
+    }
+
+    p {
+      font-family: $simple-font;
+      font-size: 1rem;
+      color: #90928f;
+    }
+
+    .parking-side-content {
+      flex: 1;
+      margin: 0 20px;
+    }
+    .lounge-side-content {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .flexible-content {
+      display: flex;
+      align-items: center;
+
+      .links {
+        flex: 1;
+        margin: 15px 0 0;
+        padding: 0;
+        li {
+          list-style: none;
+
+          a {
+            display: flex;
+            font-family: $simple-font;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #90928f;
+            margin: 5px 0 0;
+          }
+
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-end-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    padding: 20px 80px;
+    p {
+      font-family: $simple-font;
+      font-size: 1rem;
+      color: $primary-clr;
+      flex: 1;
+      .primary-link {
+        text-decoration: none;
+        color: $primary-clr;
+      }
+      .primary-link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.d-none {
+  display: none !important;
+}
